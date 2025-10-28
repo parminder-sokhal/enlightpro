@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
+
+    <meta name="csrf-token" content="D6912jagXlwfHPJztMgbOxK255cgwPDUXn0KIDdM">
+
+    <style>
+        :root {
+            --primary-color: #1d5f6f;
+            --primary-color-rgb: rgba(29, 95, 111, 0.8);
+            --primary-color-hover: #063a5d;
+        }
+    </style>
+                 <style> :root{ --color-primary: #006CE3; --color-red: #d85353; --color-orange: #f0560a; --color-green: #118730; --color-green-light: #4CAF50; --color-stroke: #dcdfe6; --color-primary-font: #212529; --color-secondary-font: #726e6e; --color-gray: #8e8e8e; --color-gray-light: #f5f8fa; --color-yellow: #e6bd00; --color-footer: #474e52; --color-footer-title-text: #fff; --color-footer-text: #ccc; --color-footer-stroke: rgba(255, 255, 255, 0.1); } *, *::before, *::after { box-sizing: border-box; } body{ margin: 0; font-family: open sans,sans-serif; font-weight: 400; line-height: 1.5; font-size: 14px; color: var(--color-primary-font); } h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: .5rem; } a { color: var(--color-primary-font); text-decoration: none; } ul, li { margin: 0; padding: 0; list-style: none; } .container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; } @media (min-width: 768px) and (max-width: 992px) { .container { max-width: 720px; } } @media (min-width: 992px) and (max-width: 1200px) { .container { max-width: 960px; } } @media (min-width: 1200px) { .container { max-width: 1140px; } }  .lazy-display, .d-none { display: none !important; }  header { background: #fff; position: sticky; top: 0; z-index: 12; }   #static-top-nav { display: flex; align-items: center; } .main-menu{ height: 60px; display: flex; justify-content: space-between; flex-wrap: nowrap; left: 0; right: 0; font-size: 13px; background: #fff; z-index: 12; }  .main-menu__right { margin-inline-start: auto; margin-bottom: 0; order: 2; display: flex; flex-wrap: nowrap; flex-direction: row-reverse; align-items: center; padding: 0; gap: 5px; }  .main-menu__left { order: 1; display: flex; flex-wrap: nowrap; align-items: center; padding: 0; } .main-menu .menu-dropdown-submenu, .main-menu .currency-menu, .main-menu .menu-language, .menu-side__account__inner{ display: none; } .main-menu .menu-side__sub-menu__title{ padding: 12px 10px; font-weight: 600; white-space: nowrap; } .main-menu .menu-side__sub-menu__title .sub-title{ color: #fff; border-radius: 50rem; background-color: var(--color-green-light); white-space: nowrap; padding: 0.25rem 0.5rem; font-size: 0.875em; margin-left: 0.25rem; } .main-menu .menu-side__sub-menu{ position: relative; padding: 10px 0; }  .main-menu__logo{ flex: 0 0 120px; width: 120px; height: 100%; margin: 0 10px; display: flex; flex-wrap: nowrap; align-items: center; position: relative; background: url("logo/enlightlogo.png") no-repeat center / 50px; } @media (min-width: 767px) { #unit-search-autocomplete{ width: 390px; max-width: 100%; margin-right: 10px; } } @media (max-width: 1100px) and (min-width: 768px) { #unit-search-autocomplete{ flex: 1; } }  .main-menu .my-account-profile{ border: 2px solid var(--color-primary); color: var(--color-primary); font-weight: 600; border-radius: 4px; white-space: nowrap; } .my-account-profile{ display: flex; align-items: center; padding: 10px 15px; justify-content: space-between; cursor: pointer; } .main-menu .toggle-sign-in:hover .menu-side__account .my-account-profile .my-account-profile__title .my-account-profile-img { filter: brightness(0) invert(1); } .my-account-profile__title{ display: flex; gap: 5px; align-items: center; font-weight: 600; } .get_locale{ text-transform: uppercase; } .hyphen-languages{ padding: 0 5px; display: inline-flex; }  .my-account-profile-img { width: 17px; height: 17px; flex: 0 0 17px; display: block; background: url(/images/icon/default/me.svg) no-repeat center center / cover; border-radius: 50%; } #account-menu-right .menu-side__account .my-account-profile-img { filter: initial; }  .toggle-menu-side{ order: 3; height: 60px; flex: 0 0 60px; width: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; border-radius: 4px; cursor: pointer; z-index: 8; } .toggle-menu-side__item{ background: var(--color-primary); display: block; width: 30px; height: 2px; margin: 2px auto; position: relative; }  .menu-language{ display: none; } .menu-side__sub-menu__title{ display: flex; }  .clickMoveItem { position: relative; } .wrapper-scroll {  text-align: start; position: relative; width: 100%; overflow-x: scroll; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; } .wrapper-scroll::-webkit-scrollbar { display: none; }  .menu-sell-bayut-template{ border: 2px solid var(--color-red); color: var(--color-red); background: #fff; border-radius: 4px; padding: 10px 15px; display: flex; justify-content: space-between; gap: 5px; font-weight: 600; white-space: nowrap; } .notification-badge-li{ border-radius: 50%; font-size: 9px; color: #fff; flex: 0 0 15px; width: 15px; height: 15px; padding: 0; background: var(--color-orange); display: flex; align-items: center; justify-content: center; border-color: var(--color-orange); font-style: normal; } @media (max-width: 1350px){ .main-menu .main-menu__right{ display: none !important; } } .list-style-none{ list-style: none; } .wrap-icon-info{ display: flex; flex-wrap: wrap; column-gap: 5px; align-items: center; font-weight: 600; font-size: 13px; } .icon-info-unit { flex: 0 0 18px; width: 18px; height: 18px; } .icon-compare{ position: absolute; top: 35px; right: 10px; background: url("/images/icon-compare.svg") no-repeat center; } .icon-compare--active { background: url("/images/icon-compare-active.svg") no-repeat center; } .icon-favourite { position: absolute; right: 10px; top: 8px; background: url("/images/icon-favourite.svg") no-repeat center; } .icon-favourite--active{ background: url("/images/icon-favourites-active.svg") no-repeat center; } .icon-language-on-menu{ padding-inline-start: 20px; background: url("/images/world-icon.svg") no-repeat left 1px / 17px; } </style>      <style> .blur-content { filter: blur(20px); } </style>  <style> .wrap-banner { text-align: center; position: relative; z-index: 3; } .container-space{ padding: 0 15px; width: 100%; } .search-wrapper { max-width: 620px; margin: 0 auto; height: 59px; text-align: start; } .banner-title { text-shadow: 1px 2px 4px rgba(0, 0, 0, .4); margin: 0; color: #fff; font-weight: 700; } .banner-sub-title { color: #fff; margin: 0 0 35px 0; line-height: 21px; font-weight: 600; } .search-select { max-width: 100%; margin: 0 auto 10px auto; display: inline-flex; flex-wrap: nowrap; justify-content: center; overflow: hidden; border-radius: 8px; background-color: rgba(59, 65, 68, .6); } .search-select__item { font-size: 18px; border-radius: 8px; font-weight: 600; color: #fff; transition: all .1s ease 0s; } @media (max-width: 768px) { .search-select__item { min-width: 80px; padding: 7px 15px; } } @media (min-width: 768px) { .search-select__item { padding: 7px 24px; } } .search-select__item:hover{ color: #fff; } .search-select__item--select{ background: #fff; color: var(--color-primary); position: relative; z-index: 1; } @media (min-width: 768px) { .wrap-banner { margin: 0 15px; border-radius: 8px; padding: 140px 80px; min-height: 492px; } .banner-title { font-size: 36px; line-height: 30px; padding: 0 0 15px 0; } .banner-sub-title { font-size: 18px; text-shadow: 1px 2px 3px rgba(0, 0, 0, .4); } .search-select:hover .search-select__item{ background: none; color: #fff; } .search-select:hover .search-select__item:hover{ background: #fff; color: var(--color-primary); position: relative; z-index: 1; } } @media (max-width: 767px) { .wrap-banner { display: flex; height: 400px; align-items: center; } .banner-title { font-size: 28px; line-height: 28px; padding: 0 15px 10px 15px; } .banner-sub-title { font-size: 14px; letter-spacing: -0.3px; text-shadow: 1px 2px 3px rgba(0, 0, 0, .5); min-height: 42px; } } @media (max-width: 320px) { .wrap-banner { height: calc(100vh - 245px); } }  .header-data { text-align: start; } .header-data-topic { margin: 0; font-weight: 700; font-size: 20px; } .header-data-sub { color: var(--color-secondary-font); display: block; font-size: 14px; font-weight: 500; } @media (min-width: 768px) { .header-data{ padding: 50px 35px 15px 35px; } } @media (max-width: 767px) { .header-data{ padding: 30px 15px 15px 15px; } } </style> <style> @media (min-width: 768px) { .wrap-banner { background: no-repeat center -1px / cover; background-image: -webkit-image-set(url("www.fazwaz.com/images/herophoto.jpeg") 1x, url("www.fazwaz.com/images/herophoto.jpeg") 2x, url("www.fazwaz.com/images/herophoto.jpeg") 3x); background-image: image-set(url("www.fazwaz.com/images/herophoto.jpeg") 1x, url("www.fazwaz.com/images/herophoto.jpeg") 2x, url("www.fazwaz.com/images/herophoto.jpeg") 3x); } } </style> <style> .wrapper-hot-region{ width: 100%; overflow: hidden; position: relative; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; } #containerNewHomes::-webkit-scrollbar { display: none; } #containerHotRegion { width: 100%; white-space: nowrap; display: flex; transition: all 0.6s ease; text-align: start;  scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; } #containerHotRegion::-webkit-scrollbar { display: none; } @media (max-width: 768px) { #containerHotRegion { padding: 0 8px; } } @media (min-width: 768px) { #containerHotRegion { padding: 0 28px; } } .hidden { display: none; } .hot-region-col { gap: 14px; width: auto; position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between; padding: 0 7px; } .hot-region-col--last{ min-width: 268px; } .hot-region-link { flex: 0 0 267px; width: 267px; position: relative; overflow: hidden; border-radius: 8px; height: 338px; } .hot-region-link:after { content: ''; position: absolute; left: 0; bottom: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(0deg, var(--color-primary) 0%, rgba(0,0,0,0.3) 100%); transition: all .4s ease; display: none; } .hot-region__secondary__item:hover:after { content: ''; position: absolute; left: 0; right: 0; height: 100%; background: linear-gradient(0deg, var(--color-primary) 0%, rgba(0,0,0,0.3) 100%); transition: all .4s ease; } .hot-region__secondary__item:hover:before { display: none; } .hot-region-link:before, .hot-region__secondary__item:before { content: ''; position: absolute; top: auto; bottom: 0; border-radius: 0 0 4px 4px; height: 50%; width: 100%; z-index: 1; background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 3%, rgba(0, 0, 0, .8) 100%); } .hot-region__secondary img { object-fit: cover; } .hot-region__secondary { display: flex; flex-direction: revert; flex-wrap: wrap-reverse; flex-flow: row wrap; max-width: 550px; height: 338px; gap: 14px; position: relative; } .hot-region__secondary__item { width: 268px; height: 162px; float: right; border-radius: 8px; overflow: hidden; padding: 0; position: relative; } .hot-region-sub-item-2{ width: 268px; } .hot-region-sub-item-2 .hot-region__secondary__item { position: relative; } .hot-region-sub-item-4{ width: 550px; } .mt-auto { margin-top: auto; }  .hot-region-header { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 13px; font-weight: 600; padding: 15px; color: #fff; z-index: 1; } .hot-region-name { transition: all .4s ease; display: block; font-size: 18px; white-space: normal; margin: 0; font-weight: 600; text-align: center; } .count_property_footer { transition: all .4s ease; position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-wrap: nowrap; font-size: 13px; font-weight: 600; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 10px 0; opacity: 0; } .count_property_footer span { flex-grow: 1; flex-basis: 0; text-align: center; white-space: normal; }  .hot-region__secondary__info { padding: 15px; text-align: start; position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; color: #fff; font-size: 13px; } .hot-region__secondary__title { font-weight: 600; font-size: 16px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }  .hot-region-link:hover h2 { padding-bottom: 120px; } .hot-region-link:hover .count_property_footer { opacity: 1; } .hot-region-link:hover:after { display: block; } .hot-region-link:hover:before { display: none; } .hot-region-link:hover .hot-region-name { font-size: 23px; } #leftButtonHotRegion{ top: 50%; left: 15px; width: 40px; height: 40px; position: absolute; cursor: pointer; border-radius: 50%; transition: all 0.4s ease; transform: translate(0, -50%); border: 1px solid var(--color-stroke); background-image: url(/images/icon/group-icon-arrow.webp); background-position-x: -5px; background-position-y: -52px; z-index: 2; opacity: 0; } #rightButtonHotRegion{ top: 50%; right: 15px; width: 40px; height: 40px; position: absolute; cursor: pointer; border-radius: 50%; transition: all 0.4s ease; transform: translate(0, -50%); border: 1px solid var(--color-stroke); background-image: url(/images/icon/group-icon-arrow.webp); background-position-x: -52px; background-position-y: -52px; z-index: 2; opacity: 0; } .wrapper-hot-region:hover #rightButtonHotRegion, .wrapper-hot-region:hover #leftButtonHotRegion, .wrapper-hot-region:focus #rightButtonHotRegion, .wrapper-hot-region:focus #leftButtonHotRegion{ opacity: 1; } </style> <style> .section-why-buy-with{ background: var(--color-primary); color: #fff; position: relative; } @media (min-width: 768px) { .section-why-buy-with{ border-radius: 8px; } } #why-buy-with-video__cover{ object-fit: cover; width: 100%; height: 100%; transition: all .4s ease; } .play-btn { position: absolute; z-index: 2; margin: 0 auto; display: flex; align-items: center; justify-content: center; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0, .2); } .icon-video-border { display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 3px solid #fff; width: 70px; height: 70px; cursor: pointer; overflow: hidden; position: relative; transition: all .4s ease; } .icon-video{ width: 0; height: 0; border-bottom: 10px solid transparent; border-top: 10px solid transparent; border-left: 20px solid #fff; border-radius: 4px; } .why-buy-with-info__item{ display: flex; justify-content: space-between; } .why-buy-with-info__item__description{ flex: 0 0 calc(100% - 50px); } .why-buy-with-video{ cursor: pointer; overflow: hidden; background: #000; display: flex; align-items: center; } @media (min-width: 767px) { .section-why-buy-with{ padding-inline-start : 50%; display: flex; margin: 70px 35px 0 35px; } .why-buy-with-info{ padding-top: 50px; padding-bottom: 50px; padding-inline-end: 35px; } .why-buy-with-video{ border-start-start-radius: 8px; border-end-start-radius: 8px; left : 0; position: absolute; width: 50%; top: 0; bottom: 0; } } @media (max-width: 767px) { .section-why-buy-with{ margin: 30px 0 0 0; } .why-buy-with-info{ padding: 25px 15px; } .why-buy-with-video{ width: 100%; height: auto; position: relative; } } .why-buy-with-info{ display: flex; flex-direction: column; gap: 20px; } </style> <style> .project-img { min-height: 170px; } .new-homes-col__photo{ height: 175px; border-radius: 8px; overflow: hidden; position: relative; } </style> <style> #containera99DK{ width: 100%; overflow: hidden; white-space: nowrap; display: flex; gap: 14px; text-align: start;  scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; } #containera99DK::-webkit-scrollbar { display: none; } @media (max-width: 768px) { #containera99DK{ padding: 0 15px; } } @media (min-width: 768px) { #containera99DK{ padding: 0 35px; } } .unit__item-a99DK { flex: 0 0 267px; width: 267px; position: relative; display: flex; flex-direction: column; gap: 10px; }  #containera99DK:hover ~ .position-relative #rightButtona99DK, #containera99DK:hover ~ .position-relative #leftButtona99DK, #rightButtona99DK:hover, #leftButtona99DK:hover, #leftButtona99DK:hover ~ #rightButtona99DK, .position-relative:hover #leftButtona99DK{ opacity: 1; z-index: 6; } </style> <style> .hidden { display: none; } .crop-all-block { position: relative; overflow: hidden; }    .unit__item__photo { overflow: hidden; height: 175px; border-radius: 8px; background: #ddd; position: relative; } @media (min-width: 768px) { .unit__item__img { transition: all 0.4s ease; } .unit__item:hover .unit__item__img { transform: scale(1.2); } } .unit__item_description {  text-align: start; line-height: normal; width: 100%; } .name-unit { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border: 0; font-weight: 400; color: var(--color-gray); margin: 2px 0; } .location-unit { font-weight: 400; color: var(--color-gray); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: -2px; }  .dynamic-tooltip { display: none; font-style: normal; min-width: 60px; width: max-content; border-radius: 4px; position: absolute; bottom:-4px; font-size: 11px; font-weight: 400; padding: 5px 10px; background: rgba(0, 0, 0, .9); word-wrap: break-word; left: inherit; right: 29px; transform: translate(0, -2px); color: #fff; opacity: 1; z-index: 3; } i:hover .dynamic-tooltip{ display: block; width: auto; } .dynamic-tooltip:before { content: ''; width: 0; height: 0; border-width: 0 5px 5px 5px; border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent; border-style: solid; transform: rotate(90deg); position: absolute; top: 10px; left: auto; right: -7px; margin: 0 auto; }  .unit__item__link{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; }  .price-unit { font-size: 19px; font-weight: 700; color: var(--color-red); display: flex; align-items: center; gap: 5px; } .price-unit__small { font-size: 13px; color: var(--color-secondary-font); text-decoration: line-through; font-weight: 600; } .price-unit__promotion{ padding: 0 5px; font-size: 10px; color: #fff; background: var(--color-red); border-radius: 4px; }  .all-status { position: absolute; left : 10px; display: flex; flex-wrap: wrap; ; top: 10px; max-width: 85%; text-transform: uppercase; font-weight: 600; color: #fff; z-index: 1; gap: 5px; } .all-status__item { padding: 1px 5px 0 5px; font-size: 10px; border-radius: 4px; } .status-new { background: var(--color-green-light); } .status-reserved{ background: var(--color-red); } .status-off-plan { background: var(--color-primary); } .status-promotion{ background: var(--color-orange); } .status-guaranteed { background: var(--color-red); } </style> <style> #containerP5MHn{ width: 100%; overflow: hidden; white-space: nowrap; display: flex; gap: 14px; text-align: start;  scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; } #containerP5MHn::-webkit-scrollbar { display: none; } @media (max-width: 768px) { #containerP5MHn{ padding: 0 15px; } } @media (min-width: 768px) { #containerP5MHn{ padding: 0 35px; } } .unit__item-P5MHn { flex: 0 0 267px; width: 267px; position: relative; display: flex; flex-direction: column; gap: 10px; }  #containerP5MHn:hover ~ .position-relative #rightButtonP5MHn, #containerP5MHn:hover ~ .position-relative #leftButtonP5MHn, #rightButtonP5MHn:hover, #leftButtonP5MHn:hover, #leftButtonP5MHn:hover ~ #rightButtonP5MHn, .position-relative:hover #leftButtonP5MHn{ opacity: 1; z-index: 6; } </style> <style> @media (min-width: 768px) { .back-to-top-active { max-width: 1140px; padding: 0 15px; margin: 20px auto -50px auto; position: sticky; z-index: 6; bottom: 0; top: auto; left: 0; right: 0; display: flex; justify-content: flex-end;  pointer-events: none; } .back-to-top { display: flex; flex-wrap: wrap; align-items: center; cursor: pointer; color: #fff; font-size: 13px; font-weight: 700; text-transform: uppercase; max-width: max-content; width: 100%; text-align: right; background: var(--color-primary); flex-direction: row; padding: 8px 12px; border-top-right-radius: 6px; border-top-left-radius: 6px; gap: 5px; pointer-events: all; } .back-to-top__icon { background: url("/images/icon/up-icon.svg") no-repeat center center / cover; width: 18px; height: 18px; flex: 0 0 18px; display: block; filter: grayscale(100%); } .back-to-top:hover{ text-decoration: underline; } } @media (min-width: 768px) { .back-to-top:hover .back-to-top__icon{ filter: grayscale(0); } } </style><link rel="prefetch" as="script" href="www.fazwaz.com/frontend/modern/js/components/enquiry-modal.7757d8b8849c72ee.js" /><style>.vue-modal-resizer{bottom:0;cursor:se-resize;height:12px;overflow:hidden;right:0;width:12px;z-index:9999999}.vue-modal-resizer,.vue-modal-resizer:after{background:transparent;display:block;position:absolute}.vue-modal-resizer:after{border-bottom:10px solid #ddd;border-left:10px solid transparent;content:"";height:0;left:0;top:0;width:0}.vue-modal-resizer.clicked:after{border-bottom:10px solid #369be9}</style><style>.v--modal-block-scroll{overflow:hidden;width:100vw}.v--modal-overlay{background:rgba(0,0,0,.2);box-sizing:border-box;height:100vh;left:0;opacity:1;position:fixed;top:0;width:100%;z-index:999}.v--modal-overlay.scrollable{-webkit-overflow-scrolling:touch;height:100%;min-height:100vh;overflow-y:auto}.v--modal-overlay .v--modal-background-click{height:auto;min-height:100%;width:100%}.v--modal-overlay .v--modal-box{box-sizing:border-box;overflow:hidden;position:relative}.v--modal-overlay.scrollable .v--modal-box{margin-bottom:2px}.v--modal{background-color:#fff;border-radius:3px;box-shadow:0 20px 60px -2px rgba(27,33,58,.4);padding:0;text-align:left}.v--modal.v--modal-fullscreen{height:100vh;left:0;margin:0;top:0;width:100vw}.v--modal-top-right{display:block;position:absolute;right:0;top:0}.overlay-fade-enter-active,.overlay-fade-leave-active{transition:all .2s}.overlay-fade-enter,.overlay-fade-leave-active{opacity:0}.nice-modal-fade-enter-active,.nice-modal-fade-leave-active{transition:all .4s}.nice-modal-fade-enter,.nice-modal-fade-leave-active{opacity:0;transform:translateY(-20px)}</style><style>.currency-menu .lds-ellipsis{align-items:center;display:flex;justify-content:center;min-height:50px}.currency-menu .lds-ellipsis div{background-color:#006ce3}@media(max-width:768px){.currency-menu .lds-ellipsis{height:100vh}}</style><style>.box-search-big[data-v-281f3173]{width:490px!important}.search-open-mobile-homepage .box-search-big[data-v-281f3173]{width:100%!important}.rtl-direction.search-open-mobile-homepage[data-v-281f3173]{direction:rtl}.label-type[data-v-281f3173]{border:1px solid var(--color-stroke);border-radius:4px;color:var(--color-primary);font-size:12px;font-weight:100;margin-bottom:auto;margin-top:auto;min-width:107px;padding:4px;text-align:center}.label-type.focus[data-v-281f3173]{color:#fff}.auto-complete-search-input[data-v-281f3173]{height:46px;position:relative;width:100%}@media(min-width:767px){.wrap-banner .auto-complete-search-input[data-v-281f3173]{height:59px}}@media(max-width:767px){.wrap-banner .auto-complete-search-input[data-v-281f3173]{height:auto}}.search-open-mobile-homepage .is-focus.auto-complete-search-input[data-v-281f3173]{background:#fff;bottom:0;height:auto;left:0;overflow:auto;padding-top:127px;position:fixed;right:0;top:0;z-index:99}.search-open-mobile-homepage .inner-input[data-v-281f3173]{background:#fff;left:0;position:fixed;right:0;top:0;z-index:1}.auto-complete-search-input__input[data-v-281f3173]{-webkit-appearance:none;background-image:none;border:1px solid var(--color-stroke);border-radius:4px;box-sizing:border-box;color:#606266;cursor:pointer;display:inline-block;font-size:14px;outline:0;overflow:hidden;padding-bottom:12px;padding-inline-end:65px;padding-top:12px;padding-inline-start:15px;text-align:start;text-overflow:ellipsis;transition:border-color .2s cubic-bezier(.645,.045,.355,1);white-space:nowrap;width:100%}.wrap-banner .auto-complete-search-input__input[data-v-281f3173]{padding-bottom:18px;padding-top:18px}.rtl-direction .wrap-banner .auto-complete-search-input__input[data-v-281f3173]{direction:rtl}.search-open-mobile-homepage .auto-complete-search-input__input[data-v-281f3173]{margin:10px;padding-bottom:12px;padding-inline-end:65px;padding-top:12px;padding-inline-start:15px;text-align:start;width:calc(100% - 20px)}.banner input[data-v-281f3173]{border-color:#fff}.suggestion-options__wrap[data-v-281f3173]{background-color:#fff;border-end-end-radius:4px;border-end-start-radius:4px;display:block;margin:0;overflow-y:scroll;width:100%}@media(min-width:768px){.suggestion-options__wrap[data-v-281f3173]{box-shadow:0 2px 5px 0 rgba(0,0,0,.2);max-height:260px}.search-open-mobile-homepage .suggestion-options__wrap[data-v-281f3173]{box-shadow:none;max-height:auto}}.inner-input .suggestion-options__wrap[data-v-281f3173]:first-child{display:none!important}.rtl-direction .suggestion-options__wrap[data-v-281f3173]{direction:rtl}.suggestion-options[data-v-281f3173]{background-color:#fff;overflow:hidden;width:100%}@media(max-width:768px){.suggestion-options[data-v-281f3173]{padding-bottom:100px}}.suggestion-options__empty[data-v-281f3173]{border-top:1px solid var(--color-stroke);color:#999;font-size:14px;margin:0;padding:15px 0;text-align:center}.suggestion-options__loading[data-v-281f3173]{color:#999;font-size:14px;margin:0;padding:10px 0;text-align:center}.auto-complete-group__wrap[data-v-281f3173]{position:relative}.auto-complete-group__title[data-v-281f3173]{background:var(--color-gray-light);border-bottom:1px solid var(--color-stroke);border-top:1px solid var(--color-stroke);font-size:13px;padding:7px 15px;text-align:start;text-transform:uppercase}.auto-complete-group[data-v-281f3173]{box-sizing:inherit}.auto-complete-dropdown__item[data-v-281f3173]{box-sizing:border-box;cursor:pointer;display:flex;flex-wrap:nowrap;font-size:13px;font-weight:700;height:auto;justify-content:space-between;line-height:normal;overflow:hidden;padding:10px 15px;position:relative;text-overflow:ellipsis;white-space:nowrap}.auto-complete-dropdown__item[data-v-281f3173]:active,.auto-complete-dropdown__item[data-v-281f3173]:hover{background-color:var(--color-gray-light)}.auto-complete-dropdown__item.focus[data-v-281f3173],.auto-complete-dropdown__item.focus span[data-v-281f3173]{background-color:var(--color-primary);color:#fff}.overflow-text[data-v-281f3173]{flex:0 0 calc(100% - 113px);overflow:hidden;text-align:start;text-overflow:ellipsis;white-space:nowrap}.formatted-address[data-v-281f3173]{color:var(--color-gray);font-weight:400}@media(max-width:480px){.banner .auto-complete-search-input input[data-v-281f3173]{max-height:inherit}}.inner-input-back-btn[data-v-281f3173]{align-items:center;border-bottom:1px solid var(--color-stroke);display:flex;font-size:16px;font-weight:700;height:60px;justify-content:center}.inner-input-back-btn__icon[data-v-281f3173]{background:#fff url(/images/icon/down-arrow.svg) no-repeat 50%/23px 23px;content:"";height:59px;left:0;position:absolute;top:0;transform:rotate(90deg);width:59px;z-index:1}.rtl-direction .inner-input-back-btn__icon[data-v-281f3173]{left:auto;right:0;transform:rotate(-90deg)}</style><style>.loading-circle[data-v-3ed440bf]{-webkit-animation-duration:.4s;-moz-animation-duration:.4s;-ms-animation-duration:.4s;animation-duration:.8s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;animation-iteration-count:infinite;-moz-animation-name:spin-3ed440bf;-ms-animation-name:spin-3ed440bf;animation-name:spin-3ed440bf;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear;-ms-animation-timing-function:linear;animation-timing-function:linear;border-color:#000;border-color:rgba(0,0,0,.2) rgba(0,0,0,.15) rgba(0,0,0,.1) rgba(0,0,0,.05);border-style:solid;border-width:8px;display:flex;height:0;overflow:hidden;width:0}@keyframes spin-3ed440bf{0%{transform:rotate(0deg)}to{border-radius:50%;transform:rotate(1turn)}}</style><style>.box-search .choose-on-map__wrap .v--modal-box.v--modal{top:0!important}</style><style>.location-picker-header[data-v-3660a009]{height:50px;justify-content:center;position:relative;width:100%}.header-description__wrap[data-v-3660a009],.location-picker-header[data-v-3660a009]{align-items:center;display:flex;flex-direction:column}.header-title[data-v-3660a009]{color:#5c6872;font-size:13px;font-weight:700}.header-description[data-v-3660a009]{color:#5c6872;font-size:11px}.map-container[data-v-3660a009]{bottom:0;height:calc(100% - 50px)}.close-button[data-v-3660a009]{background-color:#fff;background-image:url(/images/icon/close-black.svg);background-position:50%;background-repeat:no-repeat;background-size:15px 15px;border:none;cursor:pointer;height:50px;position:absolute;right:0;text-decoration:none;top:0;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:50px}.done-button[data-v-3660a009]{bottom:10px;left:10px;position:fixed;right:10px;z-index:999}.done-button.disabled[data-v-3660a009]{opacity:.5}.v--modal-box.v--modal[data-v-3660a009]{top:61px!important}@media (max-width:767px){.v--modal-box.v--modal[data-v-3660a009]{border-radius:0}}</style><style>.Typeahead[data-v-5f0b5ea8]{position:relative}.auto-complete-icon[data-v-5f0b5ea8]{align-items:center;background:var(--color-primary);border-end-end-radius:4px;border-start-end-radius:4px;bottom:0;cursor:pointer;display:flex;height:60px;justify-content:center;opacity:1;overflow:hidden;position:absolute;right:0;top:0;width:60px}.rtl-direction .auto-complete-icon[data-v-5f0b5ea8]{direction:rtl;left:0;right:auto}.search-wrapper ul[data-v-5f0b5ea8]{background-color:#fff;border-radius:0;box-shadow:0 0 10px rgba(0,0,0,.25);list-style:none;margin-top:3px;min-width:100%;padding:0;position:absolute;text-align:start;z-index:10}.search-wrapper ul li[data-v-5f0b5ea8]{cursor:pointer;font-size:14px;padding:15px;position:relative}.search-wrapper ul li[data-v-5f0b5ea8]:nth-child(2n){background:#eee}.search-wrapper ul li:nth-child(2n).active[data-v-5f0b5ea8]{background:var(--color-primary)}.search-wrapper ul small[data-v-5f0b5ea8]{font-size:12px;font-weight:600;position:absolute;right:15px;top:50%;transform:translateY(-50%)}.search-wrapper span[data-v-5f0b5ea8]{color:#2c3e50;display:block}.filter-type[data-v-5f0b5ea8]{align-items:center;border-top:1px solid var(--color-stroke);display:flex;font-size:13px;font-weight:600;gap:10px;padding:15px}</style><style>.lds-ellipsis[data-v-4c9e6a4a]{align-items:center;display:inline-flex;height:18px;margin:0 auto;position:relative;width:63px}.lds-ellipsis div[data-v-4c9e6a4a]{animation-timing-function:cubic-bezier(0,1,1,0);background:#fff;border-radius:50%;height:11px;position:absolute;width:11px}.lds-ellipsis div[data-v-4c9e6a4a]:first-child{animation:lds-ellipsis1-4c9e6a4a .6s infinite;left:6px}.lds-ellipsis div[data-v-4c9e6a4a]:nth-child(2){animation:lds-ellipsis2-4c9e6a4a .6s infinite;left:6px}.lds-ellipsis div[data-v-4c9e6a4a]:nth-child(3){animation:lds-ellipsis2-4c9e6a4a .6s infinite;left:26px}.lds-ellipsis div[data-v-4c9e6a4a]:nth-child(4){animation:lds-ellipsis3-4c9e6a4a .6s infinite;left:45px}@keyframes lds-ellipsis1-4c9e6a4a{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes lds-ellipsis3-4c9e6a4a{0%{transform:scale(1)}to{transform:scale(0)}}@keyframes lds-ellipsis2-4c9e6a4a{0%{transform:translate(0)}to{transform:translate(19px)}}</style><link id="googleidentityservice" type="text/css" media="all" href="accounts.google.com/gsi/style" rel="stylesheet" /><meta http-equiv="origin-trial" content="A8o5T4MyEkRZqLA9WeG2XTFdV5tsX2Prg85xyQ+RL1btVuybB1K/EQ+7JUsPK+J32oBMTnsoF9B4A+qTlL6efgQAAABweyJvcmlnaW4iOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkZlZENtQnV0dG9uTW9kZSIsImV4cGlyeSI6MTc0NDY3NTIwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==" /><style id="googleidentityservice_button_styles">.qJTHM{-webkit-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:"Roboto-Regular",arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{overflow-wrap:break-word;word-break:break-word}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-u2z5K{height:36px;width:36px}.Bz112c-uaxL4e{-webkit-border-radius:10px;border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf,.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b&gt;.aZ2wEe&gt;div{border-color:#4285f4}.P1ekSe-ZMv3u{-webkit-transition:height linear 200ms;-webkit-transition:height linear 200ms;transition:height linear 200ms}.P1ekSe-ZMv3u&gt;div:nth-child(1){background-color:#1a73e8!important;-webkit-transition:width linear 300ms;-webkit-transition:width linear 300ms;transition:width linear 300ms}.P1ekSe-ZMv3u&gt;div:nth-child(2),.P1ekSe-ZMv3u&gt;div:nth-child(3){background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{border-radius:4px;box-sizing:border-box;-webkit-transition:background-color 0.218s,border-color 0.218s;transition:background-color 0.218s,border-color 0.218s;-webkit-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:0.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}@media screen and (preferes-contrast:more){.nsm7Bb-HzV7m-LgbsSe{color:#000}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:0.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:0.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{color:#fff}}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;-webkit-flex-direction:row;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:space-between;-webkit-justify-content:space-between;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;-webkit-box-flex:1;flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;-webkit-box-flex:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color 0.218s;transition:background-color 0.218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{box-shadow:none;border-color:#d2e3fc;outline:none}.nsm7Bb-HzV7m-LgbsSe:focus-within{outline:2px solid #00639b;border-color:transparent}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.08)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}@media screen and (prefers-contrast:more){.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff,.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#000;fill:#000}}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{-webkit-border-radius:4px;border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style><meta http-equiv="origin-trial" content="A41wt2Lsq30A9Ox/WehogvJckPI4aY9RoSxhb8FMtVnqaUle1AtI6Yf7Wk+7+Wm0AfDDOkMX+Wn6wnDpBWYgWwYAAAB8eyJvcmlnaW4iOiJodHRwczovL2Fkcm9sbC5jb206NDQzIiwiZmVhdHVyZSI6IkludGVyZXN0Q29ob3J0QVBJIiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==" /><script type="text/javascript" src="d.adroll.com/consent/check/AK6MOO6VNBHNPBXRLRSYXR"></script><script src="cdn.onesignal.com/sdks/OneSignalPageSDKES6.js" async=""></script></head><body class="  "><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/b/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/bombora/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/experian/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/g/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/index/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/l/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/n/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/o/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/outbrain/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/pubmatic/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/taboola/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/triplelift/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /><img height="1" width="1" style="border-style:none;" alt="" src="https://d.adroll.com/cm/x/out?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;advertisable=AK6MOO6VNBHNPBXRLRSYXR" /></div><script type="text/javascript" src="s.adroll.com/j/sendrolling.js"></script><img src="https://ipv4.d.adroll.com/seg4/AK6MOO6VNBHNPBXRLRSYXR/KEKHKRKR3NFU5OEI43UFQL?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;cookie=&amp;adroll_s_ref=&amp;keyw=&amp;p0=1074&amp;adroll_external_data=&amp;adroll_version=2.0" width="1" height="1" border="0" alt="" /><img src="https://d.adroll.com/uev/AK6MOO6VNBHNPBXRLRSYXR/KEKHKRKR3NFU5OEI43UFQL/?adroll_fpc=6b867caba871e0b9abc62e5c038c2205-1759211966484&amp;flg=1&amp;pv=21597386912.331207&amp;arrfrr=https%3A%2F%2Fwww.fazwaz.com%2F&amp;event_name=productView&amp;adroll_version=2.0" width="1" height="1" border="0" alt="" /><div style="width: 1px; height: 1px; display: inline; position: absolute;"></div><script type="text/javascript" async="" src="googleads.g.doubleclick.net/pagead/viewthroughconversion/950041397/"></script><script type="text/javascript" async="" src="googleads.g.doubleclick.net/pagead/viewthroughconversion/10966947908/"></script>
+
+
+    <title>Register</title>
+    <meta name="description" content="Find your favorite homes at Flex Home">
+    <meta property="og:site_name" content="Flex Home">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Register">
+    <meta property="og:image" content="https://flex-home.botble.com/storage/logo/logo.png">
+    <meta name="twitter:title" content="Register">
+
+    <link rel="icon" type="image/x-icon" href="https://flex-home.botble.com/storage/logo/favicon.png">
+
+
+
+
+    <style>
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t4r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7txr-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t6r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t7r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t1r-tqkr51.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t4r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7txr-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t6r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t7r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t1r-tqkr51.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t4r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7txr-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t6r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t7r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t1r-tqkr51.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t4r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7txr-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t6r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t7r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t1r-tqkr51.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t4r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7txr-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t6r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t7r-tqkr51pe8.woff2) format('woff2');
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(https://flex-home.botble.com/storage/fonts/12dd16c23c/snunitosansv19pe0tmimslybiv1o4x1m8ce2xcx3yop4tqpf-metm0lfgwvpnn64cl7u8uphzibmv51q42ptcp7t1r-tqkr51.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+    <style>
+        :root {
+            --primary-font: "Nunito Sans", sans-serif;
+        }
+    </style>
+
+
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/vendor/core/plugins/language/css/language-public.css?v=2.2.0">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/vendor/core/plugins/real-estate/css/front-auth.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/vendor/core/plugins/social-login/css/social-login.css?v=1.2.1">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/themes/flex-home/libraries/bootstrap/bootstrap.min.v4.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/themes/flex-home/libraries/fontawesome/css/fontawesome.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/themes/flex-home/libraries/owl-carousel/owl.carousel.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/themes/flex-home/libraries/owl-carousel/owl.theme.default.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/themes/flex-home/css/style.css?v=2.56.1.3">
+
+
+    <script data-pagespeed-no-defer="1" src="https://flex-home.botble.com/themes/flex-home/libraries/jquery.min.js"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/libraries/bootstrap/popper.min.js"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/libraries/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/libraries/jquery.matchHeight-min.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https:\/\/schema.org",
+            "@type": "WebSite",
+            "name": "Flex Home",
+            "url": "https:\/\/flex-home.botble.com"
+        }
+    </script>
+
+    <link media="all" type="text/css" rel="stylesheet" href="https://flex-home.botble.com/vendor/core/plugins/announcement/css/announcement.css?v=2.56.1">
+    <link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://flex-home.botble.com/feed/posts">
+    <link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://flex-home.botble.com/vi/feed/posts">
+    <link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://flex-home.botble.com/ar/feed/posts">
+    <link type="application/atom+xml" rel="alternate" title="Posts feed" href="https://flex-home.botble.com/fr/feed/posts">
+    <link type="application/atom+xml" rel="alternate" title="Properties feed" href="https://flex-home.botble.com/feed/properties">
+    <link type="application/atom+xml" rel="alternate" title="Properties feed" href="https://flex-home.botble.com/vi/feed/properties">
+    <link type="application/atom+xml" rel="alternate" title="Properties feed" href="https://flex-home.botble.com/ar/feed/properties">
+    <link type="application/atom+xml" rel="alternate" title="Properties feed" href="https://flex-home.botble.com/fr/feed/properties">
+    <link type="application/atom+xml" rel="alternate" title="Projects feed" href="https://flex-home.botble.com/feed/projects">
+    <link type="application/atom+xml" rel="alternate" title="Projects feed" href="https://flex-home.botble.com/vi/feed/projects">
+    <link type="application/atom+xml" rel="alternate" title="Projects feed" href="https://flex-home.botble.com/ar/feed/projects">
+    <link type="application/atom+xml" rel="alternate" title="Projects feed" href="https://flex-home.botble.com/fr/feed/projects">
+
+
+    <!-- Google Analytics -->
+    <script async defer src='https://www.googletagmanager.com/gtag/js?id=G-76NX8HY29D'>
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            if (window.gtmDebugMode) {
+                console.log('GTM Event:', arguments);
+            }
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-76NX8HY29D');
+    </script>
+
+    <script>
+        window.siteUrl = "https://flex-home.botble.com";
+    </script>
+
+</head>
+
+<body id="page-auth-register">
+
+    <div id="alert-container"></div>
+
+    
+ <header class="">
+                <div id="wsmain" class="main-menu ">
+    <a href="/public/" class="main-menu__logo" aria-label="site">
+            </a>
+    <ul class="main-menu__right">
+                    <!-- <li class="list-style-none">
+                <a class="menu-sell-bayut-template" href="/list-with-us" rel="nofollow">
+                    List your property - it's free
+                </a>
+            </li> -->
+                            <li class="my-account-profile" v-if="isGuest" >
+                                <a href="login.html">
+
+                                    Log in
+                                </a>
+                            </li>
+                                
+        
+
+        
+        <!-- <li id="multilingualUrl" class="menu-side__sub-menu toggle-language">
+            <div class="menu-side__sub-menu__title">
+                <span class="icon-language-on-menu">
+        English<i class="hyphen-languages">-</i>
+                                    </span>
+                <span class="get_locale">en</span>
+            </div>
+                            <div class="toggle-language-filter">
+                    <ul class="menu-language"><li><a href="" class="menu-language__item active"><span class="get_full_name_locale">English</span><span class="hyphen-languages">-</span><span class="get_locale">En</span></a></li><li><a href="https://www.fazwaz.co.th" class="menu-language__item "><span class="get_full_name_locale">ภาษาไทย</span><span class="hyphen-languages">-</span><span class="get_locale">Th</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">Deutsch</span><span class="hyphen-languages">-</span><span class="get_locale">De</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">Español</span><span class="hyphen-languages">-</span><span class="get_locale">Es</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">Français</span><span class="hyphen-languages">-</span><span class="get_locale">Fr</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">日本語</span><span class="hyphen-languages">-</span><span class="get_locale">Ja</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">한국어</span><span class="hyphen-languages">-</span><span class="get_locale">Ko</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">Русский</span><span class="hyphen-languages">-</span><span class="get_locale">Ru</span></a></li><li><a href="https://Enlight" class="menu-language__item "><span class="get_full_name_locale">简体中文</span><span class="hyphen-languages">-</span><span class="get_locale">Zh</span></a></li></ul>
+                </div>
+                    </li> -->
+        <!-- <li class="menu-side__sub-menu toggle-currency" onmouseover="handleGetCurrencyMenuBridge(true)">
+            <div class="menu-side__sub-menu__title" onclick="handleGetCurrencyMenuBridge(true)">
+                                    
+                            </div>
+                                                <div id="currency-menu"><div class="currency-menu"><div data-v-4c9e6a4a="" class="lds-ellipsis"><div data-v-4c9e6a4a=""></div> <div data-v-4c9e6a4a=""></div> <div data-v-4c9e6a4a=""></div> <div data-v-4c9e6a4a=""></div></div></div></div>
+                                                        </li> -->
+    </ul>
+    
+            <div class="main-menu__left">
+                        
+        
+        <ul id="dynamic-top-nav"></ul>
+
+        
+        <ul id="static-top-nav">
+  <li class="menu-side__sub-menu">
+    <a
+      class="menu-side__sub-menu__title"
+      href="/property-for-sale/thailand"
+      >Buy<i class="menu-side-arrow-icon"></i
+    ></a>
+    
+  </li>
+  <li class="menu-side__sub-menu">
+    <a
+      class="menu-side__sub-menu__title"
+      href="/property-for-rent/thailand"
+      >Rent<i class="menu-side-arrow-icon"></i
+    ></a>
+    
+  </li>
+  <li class="menu-side__sub-menu">
+    <a
+      class="menu-side__sub-menu__title"
+      href="/list-with-us"
+      >Sell<i class="menu-side-arrow-icon"></i
+    ></a>
+    
+  </li>
+  <li class="menu-side__sub-menu">
+    <a
+      class="menu-side__sub-menu__title"
+      href="/rent-to-own"
+      rel="noopener noreferrer nofollow"
+      >Rent-To-Own<i class="menu-side-arrow-icon"></i
+    ></a>
+    
+  </li>
+  <li class="menu-side__sub-menu">
+    <a
+      class="menu-side__sub-menu__title"
+      href="/project-directory/thailand"
+      >Projects<i class="menu-side-arrow-icon"></i
+    ></a>
+    
+  </li>
+  <li class="menu-side__none-sub-menu">
+    <a class="menu-side__sub-menu__title" href="/advice"
+      >Advice<i class="menu-side-arrow-icon"></i
+    ></a>
+  </li>
+</ul>
+
+
+            </div>
+    
+    
+            <div class="toggle-menu-side">
+            <i class="toggle-menu-side__item"></i>
+            <i class="toggle-menu-side__item"></i>
+            <i class="toggle-menu-side__item"></i>
+        </div>
+    </div>
+
+
+
+        <div class="menu-side">
+        </header>
+
+    <div id="app">
+        <div class="container">
+            <div class="row justify-content-center py-5">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="card bg-body-tertiary border-0 auth-card">
+
+                        <div class="card-header bg-body-tertiary border-0 p-5 pb-0">
+                            <div class="d-flex flex-column flex-md-row align-items-start gap-3">
+                                <div class="bg-white p-3 rounded">
+                                    <svg class="icon text-primary svg-icon-ti-ti-user-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M16 19h6" />
+  <path d="M19 16v6" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+</svg> </div>
+                                <div>
+                                    <h3 class="fs-4 mb-1">Register an account</h3>
+                                    <p class="text-muted">Your personal data will be used to support your experience throughout this website, to manage access to your account.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-5 pt-3">
+                            <form method="POST" action="https://flex-home.botble.com/register" accept-charset="UTF-8" id="botble-real-estate-forms-fronts-auth-register-form" class="js-base-form dirty-check" icon="ti ti-user-plus" heading="Register an account" description="Your personal data will be used to support your experience throughout this website, to manage access to your account."><input name="_token" type="hidden" value="D6912jagXlwfHPJztMgbOxK255cgwPDUXn0KIDdM">
+
+
+
+
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="first_name">
+    First name
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-user"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></span>
+
+                                        <input class="form-control ps-5" data-counter="250" placeholder="First name" required="required" name="first_name" type="text" id="first_name">
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="last_name">
+    Last name
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-user"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></span>
+
+                                        <input class="form-control ps-5" data-counter="250" placeholder="Last name" required="required" name="last_name" type="text" id="last_name">
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="username">
+    Username
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-user"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg></span>
+
+                                        <input class="form-control ps-5" data-counter="250" placeholder="Username" required="required" name="username" type="text" id="username">
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="email">
+    Email
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-mail"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg></span>
+
+                                        <input class="form-control ps-5" data-counter="60" placeholder="Email address" required="required" name="email" type="email" id="email">
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label" for="phone">
+    Phone (optional)
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-phone"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+</svg></span>
+
+                                        <input class="form-control ps-5 js-phone-number-mask form-control" data-counter="250" placeholder="Phone number" autocomplete="tel" name="phone" type="text" id="phone">
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="password">
+    Password
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-lock"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
+  <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+  <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+</svg></span>
+
+                                        <div class="input-group">
+                                            <input type="password" name="password" id="password" value="" class="form-control ps-5" data-counter="250" placeholder="Password" required="required" data-bb-password>
+                                            <span class="input-password-toggle" data-bb-toggle-password>
+            <svg class="icon svg-icon-ti-ti-eye"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+</svg>        </span>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <style>
+                                    .input-password-toggle {
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        cursor: pointer;
+                                        padding: 10px 15px;
+                                        z-index: 9;
+                                    }
+
+                                    input[data-bb-password]:valid,
+                                    input[data-bb-password].is-valid {
+                                        background-image: unset;
+                                    }
+
+                                    body[dir="rtl"] .input-password-toggle {
+                                        right: unset;
+                                        left: 0;
+                                    }
+                                </style>
+
+                                <script>
+                                    (function() {
+                                        if (window.bbPasswordToggleInitialized) {
+                                            return;
+                                        }
+
+                                        window.bbPasswordToggleInitialized = true;
+
+                                        function initPasswordToggles() {
+                                            document.querySelectorAll('[data-bb-toggle-password]').forEach(function(button) {
+                                                if (button.dataset.initialized === 'true') {
+                                                    return;
+                                                }
+
+                                                button.dataset.initialized = 'true';
+
+                                                button.addEventListener('click', function(e) {
+                                                    e.preventDefault();
+                                                    e.stopPropagation();
+
+                                                    const inputGroup = this.closest('.input-group');
+                                                    const passwordField = inputGroup ? inputGroup.querySelector('[data-bb-password]') : null;
+
+                                                    if (!passwordField) {
+                                                        console.warn('Password field not found for toggle button');
+                                                        return;
+                                                    }
+
+                                                    if (passwordField.getAttribute('type') === 'password') {
+                                                        passwordField.setAttribute('type', 'text');
+                                                        this.innerHTML = `<svg class="icon svg-icon-ti-ti-eye-off"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828" />
+  <path d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87" />
+  <path d="M3 3l18 18" />
+</svg>`;
+                                                    } else {
+                                                        passwordField.setAttribute('type', 'password');
+                                                        this.innerHTML = `<svg class="icon svg-icon-ti-ti-eye"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+</svg>`;
+                                                    }
+                                                });
+                                            });
+                                        }
+
+                                        if (document.readyState === 'loading') {
+                                            document.addEventListener('DOMContentLoaded', initPasswordToggles);
+                                        } else {
+                                            initPasswordToggles();
+                                        }
+                                    })();
+                                </script>
+
+
+
+                                <div class="mb-3 position-relative">
+
+                                    <label class="form-label form-label required" for="password_confirmation">
+    Password confirmation
+
+    
+    </label>
+
+                                    <div class="position-relative"><span class="auth-input-icon input-group-text"><svg class="icon svg-icon-ti-ti-lock"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" />
+  <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+  <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+</svg></span>
+
+                                        <div class="input-group">
+                                            <input type="password" name="password_confirmation" id="password_confirmation" value="" class="form-control ps-5" data-counter="250" placeholder="Password confirmation" required="required" data-bb-password>
+                                            <span class="input-password-toggle" data-bb-toggle-password>
+            <svg class="icon svg-icon-ti-ti-eye"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+  <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+</svg>        </span>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+
+                                <div class="mb-3 position-relative">
+
+
+
+                                    <input type="hidden" name="agree_terms_and_policy" value="0">
+
+                                    <label class="form-check">
+    <input
+        type="checkbox" id="agree_terms_and_policy_243f28785407323f2c450d79cc588bc4" name="agree_terms_and_policy" class="form-check-input"
+        value="1"
+            >
+
+            <span class="form-check-label">
+            I agree to the Terms and Privacy Policy
+        </span>
+    
+    </label>
+
+
+
+
+                                </div>
+
+
+
+                                <div class="d-grid">
+
+
+
+
+
+
+
+
+
+                                    <button class="btn btn-primary btn-auth-submit" type="submit">Register <svg class="icon svg-icon-ti-ti-arrow-narrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12l14 0" />
+  <path d="M15 16l4 -4" />
+  <path d="M15 8l4 4" />
+</svg></button>
+
+
+
+                                </div>
+
+
+
+
+
+
+
+                                <div class="mt-3 text-center">Already have an account? <a href="login.html" class="text-decoration-underline">Login</a></div>
+
+
+
+
+
+
+
+                                <div class="login-options">
+                                    <div class="login-options-title">
+                                        <p>Login with social networks</p>
+                                    </div>
+
+                                    <ul class="social-icons social-login-lg">
+
+
+                                        <li>
+                                            <a class="facebook" data-bs-toggle="tooltip" data-bs-title="Sign in with Facebook" title="Sign in with Facebook" href="https://flex-home.botble.com/auth/facebook">
+        
+        <svg class="icon svg-icon-ti-ti-brand-facebook"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg>        <span>Sign in with Facebook</span>
+    </a>
+                                        </li>
+
+
+
+                                        <li>
+                                            <a class="google" data-bs-toggle="tooltip" data-bs-title="Sign in with Google" title="Sign in with Google" href="https://flex-home.botble.com/auth/google">
+        
+        <svg class="icon svg-icon-ti-ti-brand-google"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" />
+</svg>        <span>Sign in with Google</span>
+    </a>
+                                        </li>
+
+
+
+                                      
+
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+   
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        window.trans = {
+            "Price": "Price",
+            "Number of rooms": "Number of rooms",
+            "Number of rest rooms": "Number of rest rooms",
+            "Square": "Square",
+            "million": "million",
+            "billion": "billion",
+            "in": "in",
+            "Added to wishlist successfully!": "Added to wishlist successfully!",
+            "Removed from wishlist successfully!": "Removed from wishlist successfully!",
+            "I care about this property!!!": "I care about this property!!!",
+        };
+        window.themeUrl = 'https://flex-home.botble.com/themes/flex-home';
+        window.siteUrl = 'https://flex-home.botble.com';
+        window.currentLanguage = 'en';
+    </script>
+
+    <div class="action_footer">
+        <a href="#" class="cd-top" title="back to top"><i class="fas fa-arrow-up"></i></a>
+        <a href="tel:" class="text-white" style="font-size: 17px;"><i class="fas fa-phone"></i> <span>  &nbsp;18006268</span></a>
+    </div>
+
+
+    <script src="https://flex-home.botble.com/themes/flex-home/libraries/jquery.waypoints.min.js"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/js/app.js?v=2.56.1.3"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/js/wishlist.js?v=2.56.1.3"></script>
+    <script src="https://flex-home.botble.com/themes/flex-home/js/faq.js?v=2.56.1.3"></script>
+    <script src="https://flex-home.botble.com/vendor/core/plugins/language/js/language-public.js?v=2.2.0"></script>
+    <script src="https://flex-home.botble.com/vendor/core/core/js-validation/js/js-validation.js?v=1.0.1"></script>
+    <script>
+        jQuery(document).ready(function() {
+            'use strict';
+            $("#botble-real-estate-forms-fronts-auth-register-form").each(function() {
+                $(this).validate({
+                    errorElement: 'div',
+                    errorClass: 'invalid-feedback',
+
+                    errorPlacement: function(error, element) {
+                        if (element.closest('[data-bb-toggle="tree-checkboxes"]').length) {
+                            error.insertAfter(element.closest('[data-bb-toggle="tree-checkboxes"]'));
+                        } else if (element.parent('.input-group').length || element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
+                            error.insertAfter(element.parent());
+                        } else if ($(element).data('select2')) {
+                            error.insertAfter(element.next('span'));
+                        } else {
+                            error.insertAfter(element);
+                        }
+                    },
+
+                    highlight: function(element) {
+                        $(element).closest('.form-control').removeClass('is-valid').addClass('is-invalid');
+                    },
+
+
+                    unhighlight: function(element) {
+                        $(element).closest('.form-control').removeClass('is-invalid').addClass('is-valid');
+                    },
+
+                    success: function(element) {
+                        $(element).closest('.form-control').removeClass('is-invalid').addClass('is-valid');
+                    },
+
+                    focusInvalid: false,
+
+                    rules: JSON.parse('{\u0022first_name\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022The first name field is required.\u0022,true],[\u0022String\u0022,[],\u0022The first name must be a string.\u0022,false],[\u0022Max\u0022,[\u0022120\u0022],\u0022The first name must not be greater than 120 characters.\u0022,false],[\u0022Min\u0022,[\u00222\u0022],\u0022The first name must be at least 2 characters.\u0022,false]]},\u0022last_name\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022The last name field is required.\u0022,true],[\u0022String\u0022,[],\u0022The last name must be a string.\u0022,false],[\u0022Max\u0022,[\u0022120\u0022],\u0022The last name must not be greater than 120 characters.\u0022,false],[\u0022Min\u0022,[\u00222\u0022],\u0022The last name must be at least 2 characters.\u0022,false]]},\u0022username\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022The username field is required.\u0022,true],[\u0022String\u0022,[],\u0022The username must be a string.\u0022,false],[\u0022Max\u0022,[\u0022120\u0022],\u0022The username must not be greater than 120 characters.\u0022,false],[\u0022Min\u0022,[\u00222\u0022],\u0022The username must be at least 2 characters.\u0022,false]],\u0022laravelValidationRemote\u0022:[[\u0022Unique\u0022,[\u0022username\u0022,\u0022eyJpdiI6InNjMTFzQnpoVEtIb2Z3R2YvdEppQmc9PSIsInZhbHVlIjoiTUJ4eDRMQWhMVWh3UUxaTkZCdzZOeEFkQWVDT3Z2UjhRSUdsMC8wRzNjenpqSVBZM2dWREN6UmE1VTVmYlk2L0w5S2VPRjlBK3BJVjFPLzVkR1BuNWc9PSIsIm1hYyI6IjM4NDZlODlmOTA2MjFjMGMzM2NlZWY0OWEzYTJjYTZjNWRhNzNmZTAwOTRlZmM4ZDgyMzZmMzZjYzcwOTMyMGIiLCJ0YWciOiIifQ==\u0022,false],\u0022The username has already been taken.\u0022,false]]},\u0022email\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022The email field is required.\u0022,true],[\u0022Max\u0022,[\u002260\u0022],\u0022The email must not be greater than 60 characters.\u0022,false],[\u0022Min\u0022,[\u00226\u0022],\u0022The email must be at least 6 characters.\u0022,false]],\u0022laravelValidationRemote\u0022:[[{},[\u0022email\u0022,\u0022eyJpdiI6InNjMTFzQnpoVEtIb2Z3R2YvdEppQmc9PSIsInZhbHVlIjoiTUJ4eDRMQWhMVWh3UUxaTkZCdzZOeEFkQWVDT3Z2UjhRSUdsMC8wRzNjenpqSVBZM2dWREN6UmE1VTVmYlk2L0w5S2VPRjlBK3BJVjFPLzVkR1BuNWc9PSIsIm1hYyI6IjM4NDZlODlmOTA2MjFjMGMzM2NlZWY0OWEzYTJjYTZjNWRhNzNmZTAwOTRlZmM4ZDgyMzZmMzZjYzcwOTMyMGIiLCJ0YWciOiIifQ==\u0022,false],\u0022validation.illuminate\\\\_validation\\\\_invokable_validation_rule\u0022,false],[\u0022Unique\u0022,[\u0022email\u0022,\u0022eyJpdiI6InNjMTFzQnpoVEtIb2Z3R2YvdEppQmc9PSIsInZhbHVlIjoiTUJ4eDRMQWhMVWh3UUxaTkZCdzZOeEFkQWVDT3Z2UjhRSUdsMC8wRzNjenpqSVBZM2dWREN6UmE1VTVmYlk2L0w5S2VPRjlBK3BJVjFPLzVkR1BuNWc9PSIsIm1hYyI6IjM4NDZlODlmOTA2MjFjMGMzM2NlZWY0OWEzYTJjYTZjNWRhNzNmZTAwOTRlZmM4ZDgyMzZmMzZjYzcwOTMyMGIiLCJ0YWciOiIifQ==\u0022,false],\u0022The email has already been taken.\u0022,false]]},\u0022phone\u0022:{\u0022laravelValidation\u0022:[[\u0022Nullable\u0022,[],\u0022validation.nullable\u0022,false],[\u0022Min\u0022,[\u00228\u0022],\u0022The phone must be at least 8 characters.\u0022,false],[\u0022Max\u0022,[\u002215\u0022],\u0022The phone must not be greater than 15 characters.\u0022,false],[\u0022Regex\u0022,[\u0022\\\/^([0-9\\\\s\\\\-\\\\+\\\\(\\\\)]*)$\\\/\u0022],\u0022The phone format is invalid.\u0022,false]],\u0022laravelValidationRemote\u0022:[[\u0022\u0022,[\u0022phone\u0022,\u0022eyJpdiI6InNjMTFzQnpoVEtIb2Z3R2YvdEppQmc9PSIsInZhbHVlIjoiTUJ4eDRMQWhMVWh3UUxaTkZCdzZOeEFkQWVDT3Z2UjhRSUdsMC8wRzNjenpqSVBZM2dWREN6UmE1VTVmYlk2L0w5S2VPRjlBK3BJVjFPLzVkR1BuNWc9PSIsIm1hYyI6IjM4NDZlODlmOTA2MjFjMGMzM2NlZWY0OWEzYTJjYTZjNWRhNzNmZTAwOTRlZmM4ZDgyMzZmMzZjYzcwOTMyMGIiLCJ0YWciOiIifQ==\u0022,false],\u0022validation.\u0022,false],[\u0022Unique\u0022,[\u0022phone\u0022,\u0022eyJpdiI6InNjMTFzQnpoVEtIb2Z3R2YvdEppQmc9PSIsInZhbHVlIjoiTUJ4eDRMQWhMVWh3UUxaTkZCdzZOeEFkQWVDT3Z2UjhRSUdsMC8wRzNjenpqSVBZM2dWREN6UmE1VTVmYlk2L0w5S2VPRjlBK3BJVjFPLzVkR1BuNWc9PSIsIm1hYyI6IjM4NDZlODlmOTA2MjFjMGMzM2NlZWY0OWEzYTJjYTZjNWRhNzNmZTAwOTRlZmM4ZDgyMzZmMzZjYzcwOTMyMGIiLCJ0YWciOiIifQ==\u0022,false],\u0022The phone has already been taken.\u0022,false]]},\u0022password\u0022:{\u0022laravelValidation\u0022:[[\u0022Required\u0022,[],\u0022The password field is required.\u0022,true],[\u0022Min\u0022,[\u00226\u0022],\u0022The password must be at least 6 characters.\u0022,false]]},\u0022password_confirmation\u0022:{\u0022laravelValidation\u0022:[[\u0022Confirmed\u0022,[\u0022password\u0022],\u0022The password confirmation does not match.\u0022,false]]},\u0022agree_terms_and_policy\u0022:{\u0022laravelValidation\u0022:[[\u0022Sometimes\u0022,[],\u0022validation.sometimes\u0022,false],[\u0022Accepted\u0022,[\u00221\u0022],\u0022The agree terms and policy must be accepted.\u0022,true]]}}')
+                });
+            });
+        });
+    </script>
+
+
+
+    <script src="https://flex-home.botble.com/vendor/core/packages/theme/js/toast.js?v=2.56.1"></script>
+
+    <script src="https://flex-home.botble.com/vendor/core/plugins/announcement/js/announcement.js?v=2.56.1"></script>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b1d398e9dad401ba2616b3d90f896ee","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
